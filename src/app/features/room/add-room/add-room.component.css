@@ -1,0 +1,19 @@
+/* .mat-dialog-container {
+  box-shadow: 0px 11px 15px -7px rgb(188, 221, 28),0px 24px 38px 3px rgba(215, 26, 26, 0.57),0px 9px 46px 8px rgba(159, 55, 15, 0.83);
+  background: #0944f3d7;
+  color: #2326d4;
+} */
+
+
+.container {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  background: #1fb9635e;
+  color: #062cfb;
+}
+
+.block{
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin: 60px 40px 40px 30px;
+}
