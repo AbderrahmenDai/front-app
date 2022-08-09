@@ -17,6 +17,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRippleModule } from '@angular/material/core';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+// import { MatTableDataSource } from '@angular/material/table/source';
 
 @NgModule({
   declarations: [],
@@ -37,6 +42,11 @@ import { MatRippleModule } from '@angular/material/core';
     ClipboardModule,
     MatToolbarModule,
     MatRippleModule,
+    CdkTableModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    
   ],
 })
 export class MaterialModule {}

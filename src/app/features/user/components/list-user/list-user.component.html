@@ -1,0 +1,123 @@
+<!-- 
+<ng-container matColumnDef="lastName">
+  <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
+  <mat-cell *matCellDef="let data"> </mat-cell>
+</ng-container>
+
+
+<ng-container matColumnDef="email">
+  <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+  <mat-cell *matCellDef="let data"> </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="phone">
+  <mat-header-cell *matHeaderCellDef mat-sort-header> Contact No </mat-header-cell>
+  <mat-cell *matCellDef="let data"> </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="action">
+  <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+  <mat-cell *matCellDef="let data">
+    <button mat-button color="primary" (click)="editUser(data._id)">Edit</button>
+    <button mat-button color="warn" (click)="deleteUser(data._id)">Delete</button>
+  </mat-cell>
+</ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+
+<mat-paginator #paginator [length]="employeeList && employeeList.length" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]">
+</mat-paginator>
+</div> -->
+
+
+
+<div class="container-fluid g-0 p-2">
+
+  <div class="row g-0">
+
+    <div class="col-md-2 d-flex justify-content-center align-items-center">
+      <img src="../../assets/Img/{{trainer.profile}}" alt="Profile Image" class="profile">
+    </div>
+
+    <div class="col ps-2">
+
+      <div class="row g-0">
+
+        <div class="col-md-10 text-center">
+          <span class="name">{{trainer.firstname | titlecase}} {{trainer.lastname | titlecase}}</span>
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-success" (click)="editTrainerClicked()">Edit</button>
+            <button type="button" class="btn btn-outline-danger" (click)="deleteTrainerClicked()">Delete</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row g-0 mt-3">
+
+        <div class="col-md">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Personal Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Birthdate</td>
+                <td>{{trainer.birthdate}}</td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>{{trainer.gender == 'm' ? "Male" : "Female"}}</td>
+              </tr>
+              <tr>
+                <td>Education</td>
+                <td>{{trainer.education | titlecase}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Job Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Company</td>
+                <td>{{trainer.company | titlecase}}</td>
+              </tr>
+              <tr>
+                <td>Experience</td>
+                <td>{{trainer.jobExperience}} yrs</td>
+              </tr>
+              <tr>
+                <td>Salary</td>
+                <td>{{trainer.salary}} LPA</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

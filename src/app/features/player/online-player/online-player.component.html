@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1">
+            <mat-list *ngFor="let mem of mumber" class="wlc">
+            <mat-list-item>
+                <mat-icon mat-list-icon>face</mat-icon>
+            <div mat-line> {{mem.name}} </div>
+            <mat-divider></mat-divider>
+            <div mat-line> {{mem.score}} </div>
+            </mat-list-item>
+             <mat-divider></mat-divider>
+            </mat-list>
+        </div>
+        <div class="row-cols-1">
+            <div class="col-sm spinner">
+                <mat-spinner></mat-spinner>
+            </div>
+             <div class="col-sm-2">
+               <p class="par">please wait the other member</p>
+               <button mat-flat-button color="primary" class="btn btn-1">Primary</button>
+             </div>
+        </div>
+    </div>
+</div>
+

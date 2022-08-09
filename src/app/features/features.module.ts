@@ -7,11 +7,15 @@ import { RoomModule } from './room/room.module';
 import { UserModule } from './user/user.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
+import { PlayerModule } from './player/player.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
+    PlayerModule,
     SharedModule,
     UserModule,
     AuthModule,
