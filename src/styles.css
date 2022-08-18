@@ -10,6 +10,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 
 .mat-card {
  text-align: -webkit-center;
+ background-color: gray;
+ border-radius: 60px;
 }
 
 .demo-toolbar {
@@ -47,7 +49,7 @@ mat-toolbar-row {
  position: fixed;
  bottom: 20px;
  right: 20px;
- color: white;
+ color: rgb(236, 22, 22);
 }
 
 .content-center {
@@ -80,7 +82,7 @@ strong {
 }
 
 .mat-elevation-z8 {
- box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+ box-shadow: 0 5px 5px -3px rgb(14, 230, 238), 0 8px 10px 1px rgba(238, 11, 11, 0.945), 0 3px 14px 2px rgba(245, 241, 5, 0.952);
 }
 
 .mat-cell {

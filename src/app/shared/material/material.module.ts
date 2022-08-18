@@ -21,6 +21,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 // import { MatTableDataSource } from '@angular/material/table/source';
 
 @NgModule({
@@ -28,7 +29,6 @@ import { MatSortModule } from '@angular/material/sort';
   imports: [CommonModule],
   exports: [
     MatInputModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
@@ -46,7 +46,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    
+    DragDropModule,
   ],
 })
 export class MaterialModule {}

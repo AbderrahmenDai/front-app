@@ -66,10 +66,10 @@ export class AddUserComponent implements OnInit, AfterViewInit {
       salary: this.Salary.value,
       profile: this.fileInput.nativeElement.files[0]?.name,
     };
-    this.userService.postUser(trainer).subscribe((res) => {
-      this.trainer.unshift(res);
-      this.clearForm();
-    });
+    // this.userService.postUser(trainer).subscribe((res) => {
+    //   this.trainer.unshift(res);
+    //   this.clearForm();
+    // });
   }
 
   removeUser(event: any) {

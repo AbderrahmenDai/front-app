@@ -6,14 +6,15 @@ import { PlayerListComponent } from './features/player/player-list/player-list.c
 import { AddRoomComponent } from './features/room/add-room/add-room.component';
 import { RoomDetailComponent } from './features/room/room-detail/room-detail.component';
 import { RoomListComponent } from './features/room/room-list/room-list.component';
+import { AddUserComponent } from './features/user/components/add-user/add-user.component';
 import { ListUserComponent } from './features/user/components/list-user/list-user.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  {
-    path: 'rooms',
-    component: RoomListComponent,
-  },
+  // {
+  //   path: 'rooms',
+  //   component: RoomListComponent,
+  // },
   {
     path: 'player',
     component: PlayerListComponent,
@@ -22,14 +23,31 @@ const routes: Routes = [
     path: 'welcom-game',
     component: OnlinePlayerComponent,
   },
+  // {
+  //   path: 'room-detail',
+  //   component: RoomDetailComponent,
+  // },
+  // {
+  //   path: 'trainer',
+  //   component: ListUserComponent,
+  // },
+  // {
+  //   path: 'add-trainer', //
+  //   component: AddUserComponent,
+  // },
   {
-    path: 'room-detail',
-    component: RoomDetailComponent,
+     path: 'auth', 
+     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+   },
+  { 
+    path: 'room', 
+    loadChildren: () => import('./room/room.module').then(m => m.RoomModule) 
   },
-  {
-    path: 'trainer',
-    component: ListUserComponent,
+  { 
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule) 
   },
+  { path: 'game', loadChildren: () => import('./game/game.module').then(m => m.GameModule) },
 ];
 
 @NgModule({

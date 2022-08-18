@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeaturesModule } from './features/features.module';
 import { MaterialModule } from './shared/material/material.module';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
+import { RoomModule } from './room/room.module';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +20,9 @@ import { SharedModule } from './shared/shared.module';
     FeaturesModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AuthModule,
+    RoomModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

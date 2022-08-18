@@ -1,0 +1,67 @@
+<div class="board">
+  <div class="board-bar">
+    <p class="board-name">{{ "Buiild your team" }}</p>
+  </div>
+  <ng-container *ngIf="points">
+    <div class="board-result">
+      <div class="result">
+        <div class="result-message">
+          <span>You Have {{ getResult() }} points</span>
+        </div>
+        <div class="result-button">
+          <button mat-raised-button color="primary">
+            <span>Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!points">
+    <div class="board-wrapper" cdkDropListGroup>
+      <div class="board-leftWrapper" cdkDropList [cdkDropListData]="user" (cdkDropListDropped)="drop($event)">
+        <div class="column-title">{{ "Ideas" }}</div>
+        <div>
+          <div class="card-wrapper" *ngFor="let use of user" cdkDrag>
+            <img
+              src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb"
+              alt="profile-sample1" class="background" />
+
+            <div class="card-content">
+              <img src="{{ use.img }}" alt="profile-image" class="profile" />
+              <div class="card-body">
+                <h2 class="card-role">
+                  {{ use.name }} <small>{{ use.job }}</small>
+                </h2>
+                <div class="icon-block">
+                  <a href="#"> <i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a
+                    href="#"> <i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="board-rightWrapper" cdkDropList [cdkDropListData]="result" (cdkDropListDropped)="drop($event)">
+        <div class="column-title">{{ "Pourquoi" }}</div>
+        <div class="card-wrapper" *ngFor="let use of result" cdkDrag>
+          <img
+            src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb"
+            alt="profile-sample1" class="background" />
+
+          <div class="card-content">
+            <img src="{{ use.img }}" alt="profile-image" class="profile" />
+            <div class="card-body">
+              <h2 class="card-role">
+                {{ use.name }} <small>{{ use.job }}</small>
+              </h2>
+              <div class="icon-block">
+                <a href="#"> <i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a
+                  href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

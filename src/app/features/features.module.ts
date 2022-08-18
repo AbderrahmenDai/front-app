@@ -13,6 +13,8 @@ import { PlayerModule } from './player/player.module';
 @NgModule({
   declarations: [
     
+  
+    
   ],
   imports: [
     PlayerModule,

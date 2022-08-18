@@ -1,9 +1,9 @@
 <mat-spinner class="position-absolute" diameter="30" *ngIf="loading"></mat-spinner>
 <div class="container mt-5">
   <mat-card>
-    <h2 mat-card-title class="rooms">Rooms</h2>
+    <h2 mat-card-title>Rooms</h2>
 
-    <button mat-button (click)="openCreateDialog()">Create Room</button>
+    <button mat-button >Create Room</button>
     <a mat-button routerLink="/">Back</a>
   </mat-card>
 
@@ -13,31 +13,14 @@
       <mat-list-item>
         <mat-icon matListIcon>person</mat-icon>
         <h4 matLine>{{ room.title }} ({{ room.members.length }})</h4>
-       
+
         <button mat-button class="text-primary">Join</button>
       </mat-list-item>
 
-      <div class="mb-2 d-flex">
-
-
-      </div>
-
-
-
-
+     
       <mat-divider></mat-divider>
     </div>
   </mat-list>
 
-  <mat-list>
-    <h3 matSubheader>Joined Rooms</h3>
-    <div *ngFor="let room of memberRooms">
-      <app-room-item [memberRooms]="memberRooms" [userRooms]="userRooms"  [room]="room"
-        [user]="user"></app-room-item>
-
-      <mat-divider></mat-divider>
-    </div>
-  </mat-list>
-
-
+  
 </div>

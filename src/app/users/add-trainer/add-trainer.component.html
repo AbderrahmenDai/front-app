@@ -1,0 +1,32 @@
+<div>
+  <h3 *ngIf="type === ActionType.Create">Create Room</h3>
+  <form (ngSubmit)="submit()">
+    <mat-list class="block">
+      <mat-form-field class="full-width">
+        <mat-label>Title</mat-label>
+        <input type="text" formControlName="title" placeholder="Type a room title" matInput />
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="full-width">
+        <mat-label>Number of members</mat-label>
+        <input formControlName="nbrOfMember" type="number" matInput>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="full-width">
+        <mat-label>Number of sprints</mat-label>
+        <input formControlName="numberOfSprint" type="number" matInput>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="full-width">
+        <mat-label>Time of room</mat-label>
+        <input formControlName="duration" type="number" matInput placeholder="time of room">
+      </mat-form-field>
+    </mat-list>
+    <button mat-raised-button>
+      {{ type === ActionType.Create ? 'Create' : 'Update' }}
+    </button>
+  </form>
+</div>

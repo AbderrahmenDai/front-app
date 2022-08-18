@@ -10,7 +10,7 @@ import { Room, RoomService } from '../services/room.service';
   styleUrls: ['./room-list.component.css'],
 })
 export class RoomListComponent implements OnInit {
-  publicRooms: Room[] = [];
+
   userRooms: Room[] = [];
   memberRooms: Room[] = [];
   user: any;
@@ -49,16 +49,5 @@ export class RoomListComponent implements OnInit {
         type: ActionType.Create,
       },
     });
-
-    dialog
-      .afterClosed()
-      .pipe(take(1))
-      .subscribe((room: Room) => {
-        if (room.isPublic) {
-          this.publicRooms.push(room);
-        }
-
-        this.userRooms.push(room);
-      });
   }
 }

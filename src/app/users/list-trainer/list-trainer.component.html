@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <mat-card class="mt">
+    <h2 mat-card-title class="trainer">Trainer</h2>
+
+    <button mat-button (click)="openCreateDialog()">Create Trainer</button>
+
+  </mat-card>
+
+  <mat-list>
+
+    <div *ngFor="let user of trainer">
+      <mat-list-item>
+        <mat-icon matListIcon>person</mat-icon>
+        <h4 matLine>{{ user.username }} {{ user.password }} {{ user.email}} </h4>
+
+        <button mat-button class="text-primary">Update</button>
+      </mat-list-item>
+
+      <div class="mb-2 d-flex">
+      </div>
+    </div>
+  </mat-list>
+</div>
